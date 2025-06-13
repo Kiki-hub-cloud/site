@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Атом Delivery - инновационный электромобиль для курьерских служб">
+    <title>Атом Delivery - Электромобиль будущего</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --primary-light: #3b82f6;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('img/av5.jpg') center/cover no-repeat fixed;
+            color: white;
+            position: relative;
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-light);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+        }
+        
+        .gallery-item {
+            height: 280px;
+            overflow: hidden;
+            border-radius: 16px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .stats-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 90vh;
+                text-align: center;
+                background-attachment: scroll;
+            }
+            
+            .stats-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">
+                <span class="text-primary">Атом</span> Delivery
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">О проекте</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Возможности</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tech">Технологии</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Галерея</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Команда</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="#contact">Связаться</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основное содержимое -->
+    <main>
+        <!-- Герой секция -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeIn">Электромобиль будущего для доставки нового поколения</h1>
+                        <p class="lead mb-5 animate__animated animate__fadeIn animate__delay-1s">Оптимизированный, экологичный и технологичный транспорт для курьерских служб.</p>
+                        <div class="animate__animated animate__fadeIn animate__delay-2s">
+                            <a href="#about" class="btn btn-light btn-lg px-4 py-3 me-3">Узнать больше</a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg px-4 py-3">Контакты</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- О проекте -->
+        <section id="about" class="py-5 my-5">
+            <div class="container">
+                <div class="row align-items-center mb-5">
+                    <div class="col-lg-6">
+                        <h2 class="display-5 fw-bold mb-4 section-title">Инновационный подход к доставке</h2>
+                        <p class="lead mb-4">Атом Delivery — это революционный электромобиль, разработанный специально для нужд курьерских служб, логистических компаний и сервисов доставки.</p>
+                        <p>Наш автомобиль создан с нуля для решения задач доставки, а не адаптирован из пассажирских моделей. Это позволяет достичь беспрецедентной эффективности и экономичности.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative">
+                            <img src="img/a2.jpg" alt="Атом Delivery" class="img-fluid rounded-4 shadow-lg">
+                            <div class="position-absolute bottom-0 start-0 bg-primary text-white p-3 rounded-end" style="transform: translateY(50%);">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-bolt fs-1 me-3"></i>
+                                    <div>
+                                        <div class="fs-6">Запас хода</div>
+                                        <div class="fs-4 fw-bold">350 км</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-5 pt-5">
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-truck fa-lg text-white"></i>
+                        </div>
+                        <h3 class="h4 text-center mb-3">Оптимизированная конструкция</h3>
+                        <p class="text-center">Отсутствие пассажирских мест и увеличенный багажный отсек (2.5 м³) позволяют перевозить больше грузов за один рейс.</p>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-bolt fa-lg text-white"></i>
+                        </div>
+                        <h3 class="h4 text-center mb-3">Экономия времени</h3>
+                        <p class="text-center">Интеллектуальная система навигации и управления сокращает время доставки на 25-30% по сравнению с обычными автомобилями.</p>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-leaf fa-lg text-white"></i>
+                        </div>
+                        <h3 class="h4 text-center mb-3">Экологичность</h3>
+                        <p class="text-center">Нулевые выбросы и в 3 раза меньший углеродный след по сравнению с традиционными автомобилями с ДВС.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Статистика -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="card card-hover shadow-sm h-100">
+                            <div class="card-body text-center">
+                                <div class="stats-number">350+</div>
+                                <div class="text-muted">километров пробега</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card card-hover shadow-sm h-100">
+                            <div class="card-body text-center">
+                                <div class="stats-number">2.5 м³</div>
+                                <div class="text-muted">грузового пространства</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card card-hover shadow-sm h-100">
+                            <div class="card-body text-center">
+                                <div class="stats-number">30%</div>
+                                <div class="text-muted">экономия на доставке</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card card-hover shadow-sm h-100">
+                            <div class="card-body text-center">
+                                <div class="stats-number">0</div>
+                                <div class="text-muted">выбросов CO₂</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Преимущества -->
+        <section id="features" class="py-5 my-5">
+            <div class="container">
+                <h2 class="display-5 fw-bold text-center mb-5 section-title mx-auto">Ключевые преимущества</h2>
+                
+                <div class="row align-items-center mb-5">
+                    <div class="col-lg-6 order-lg-2">
+                        <h3 class="fw-bold mb-4">Умная система управления доставкой</h3>
+                        <p>Наш автомобиль оснащен интегрированной системой управления доставкой, которая автоматически оптимизирует маршруты в реальном времени.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Пробки и дорожную ситуацию</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Приоритетность доставок</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Уровень заряда батареи</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Особенности груза</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 mb-4 mb-lg-0">
+                        <img src="img/nav.webp" alt="Умная навигация" class="img-fluid rounded-3 shadow">
+                    </div>
+                </div>
+                
+                <div class="row align-items-center mt-5 pt-5">
+                    <div class="col-lg-6">
+                        <h3 class="fw-bold mb-4">Экономическая эффективность</h3>
+                        <p>Атом Delivery позволяет значительно сократить расходы на доставку:</p>
+                        <div class="row mt-4">
+                            <div class="col-md-6 mb-4">
+                                <div class="d-flex">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-chart-line fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h5">До 60%</h4>
+                                        <p class="small">экономии на топливе</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="d-flex">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-cogs fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h5">На 40%</h4>
+                                        <p class="small">меньше обслуживания</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="d-flex">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-clock fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h5">25-30%</h4>
+                                        <p class="small">быстрее доставка</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="d-flex">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-tree fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h5">0%</h4>
+                                        <p class="small">выбросов CO₂</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="img/ttt.webp" alt="Экономическая эффективность" class="img-fluid rounded-3 shadow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фотогалерея -->
+        <section id="gallery" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="display-5 fw-bold text-center mb-5">Атом Delivery в деталях</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="gallery-item shadow">
+                            <img src="img/av3.jpg" alt="Внутренняя отделка" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="gallery-item shadow">
+                            <img src="img/bat.webp" alt="Аккумуляторная система" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="gallery-item shadow">
+                            <img src="img/bag.jpg" alt="Грузовое отделение" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="gallery-item shadow">
+                            <img src="img/pan.jpg" alt="Панель управления" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="gallery-item shadow">
+                            <img src="img/power.png" alt="Процесс зарядки" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="gallery-item shadow">
+                            <img src="img/av5.jpg" alt="Автомобиль в городской среде" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Технологии -->
+        <section id="tech" class="py-5 my-5">
+            <div class="container">
+                <h2 class="display-5 fw-bold text-center mb-5">Передовые технологии</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card card-hover h-100 shadow-sm">
+                            <img src="img/atom.webp" class="card-img-top" alt="ATOM OS">
+                            <div class="card-body">
+                                <h3 class="fw-bold">ATOM OS</h3>
+                                <p>Кастомизированная операционная система на базе Android Open Source Project, специально адаптированная для автомобильной платформы.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-hover h-100 shadow-sm">
+                            <img src="img/bord.webp" class="card-img-top" alt="Архитектура">
+                            <div class="card-body">
+                                <h3 class="fw-bold">Тонкий клиент + сервис</h3>
+                                <p>Распределённая архитектура между бортовым компьютером и облачными серверами для максимальной производительности.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-hover h-100 shadow-sm">
+                            <img src="img/flutter.jpg" class="card-img-top" alt="Flutter">
+                            <div class="card-body">
+                                <h3 class="fw-bold">Flutter UI</h3>
+                                <p>Современный кроссплатформенный фреймворк для создания красивых и отзывчивых интерфейсов.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Команда -->
+        <section id="team" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="display-5 fw-bold text-center mb-5">Наша команда</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card card-hover h-100 shadow-sm">
+                            <img src="img/nazar.webp" class="card-img-top" alt="Тимлид">
+                            <div class="card-body text-center">
+                                <h3 class="fw-bold">Назар Клименко</h3>
+                                <p class="text-muted">Тимлид Flutter-разработчиков</p>
+                                <p>Опыт работы с мобильными и автомобильными интерфейсами более 8 лет.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-hover h-100 shadow-sm">
+                            <img src="img/alex.jpg" class="card-img-top" alt="Бэкенд разработчик">
+                            <div class="card-body text-center">
+                                <h3 class="fw-bold">Алексей Петров</h3>
+                                <p class="text-muted">Архитектор микросервисов</p>
+                                <p>Специалист по распределённым системам и интеграции оборудования.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-hover h-100 shadow-sm">
+                            <img src="img/women.webp" class="card-img-top" alt="Android разработчик">
+                            <div class="card-body text-center">
+                                <h3 class="fw-bold">Ирина Смирнова</h3>
+                                <p class="text-muted">Android-инженер</p>
+                                <p>Эксперт по кастомизации AOSP и системной интеграции.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Контакты -->
+        <section id="contact" class="py-5 gradient-bg text-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="display-5 fw-bold mb-4">Готовы к сотрудничеству?</h2>
+                        <p class="lead mb-5">Оставьте заявку, и мы свяжемся с вами для обсуждения деталей.</p>
+                        <form class="row g-3 justify-content-center">
+                            <div class="col-md-5">
+                                <input type="text" class="form-control form-control-lg" placeholder="Ваше имя">
+                            </div>
+                            <div class="col-md-5">
+                                <input type="email" class="form-control form-control-lg" placeholder="Email">
+                            </div>
+                            <div class="col-10">
+                                <textarea class="form-control form-control-lg" rows="3" placeholder="Сообщение"></textarea>
+                            </div>
+                            <div class="col-10">
+                                <button type="submit" class="btn btn-light btn-lg px-5 py-3">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="h4 mb-3"><span class="text-primary">Атом</span> Delivery</h3>
+                    <p>Инновационный электромобиль для курьерских служб. Совместный проект IBS и Atom.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h4 class="h5 mb-3">Навигация</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#about" class="text-white-50 text-decoration-none">О проекте</a></li>
+                        <li class="mb-2"><a href="#features" class="text-white-50 text-decoration-none">Возможности</a></li>
+                        <li class="mb-2"><a href="#tech" class="text-white-50 text-decoration-none">Технологии</a></li>
+                        <li class="mb-2"><a href="#team" class="text-white-50 text-decoration-none">Команда</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h4 class="h5 mb-3">Контакты</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="mailto:info@atomdelivery.ru" class="text-white-50 text-decoration-none">info@atomdelivery.ru</a></li>
+                        <li class="mb-2"><a href="tel:+78001234567" class="text-white-50 text-decoration-none">8 (800) 123-45-67</a></li>
+                        <li class="mb-2">Москва, ул. Ленина, 1</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="h5 mb-3">Соцсети</h4>
+                    <div class="d-flex">
+                        <a href="#" class="me-3 text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3 text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3 text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">© 2025 Атом Delivery. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small mb-0">Разработано с <i class="fas fa-heart text-danger"></i> командой IBS и Atom</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Фиксированная навигация при скролле
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
